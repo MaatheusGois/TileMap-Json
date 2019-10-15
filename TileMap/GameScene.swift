@@ -22,10 +22,11 @@ class GameScene: SKScene {
     let tileSize = CGSize(width: 128, height: 128)
     var columns = 0
     var rows = 0
-    
-    
+    let cam = SKCameraNode()
     
     override func didMove(to view: SKView) {
+        
+        self.camera = cam
         
         guard let mapJSON = MapHandler.loadMap() else { return }
         columns = mapJSON.getColumns()
@@ -60,4 +61,14 @@ class GameScene: SKScene {
         
     }
     
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let touch = touches.first else { return }
+
+        let location = touch.location(in: self)
+        let previousLocation = touch.previousLocation(in: self)
+
+        cam.position.x += location.x - previousLocation.x
+        cam.position.y += location.y - previousLocation.y
+    }
+   
 }
