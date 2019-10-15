@@ -48,13 +48,10 @@ class GameScene: SKScene {
             for row in 0 ..< rows {
                 switch mapJSON.map[column][row] {
                     case MapCase.red.rawValue:
-                        print("red: ", column, row)
                         layer.setTileGroup(redTile, forColumn: column, row: row)
                     case MapCase.grey.rawValue:
-                        print("grey: ", column, row)
                         layer.setTileGroup(greyTile, forColumn: column, row: row)
                     default:
-                        print("brown: ", column, row)
                         layer.setTileGroup(brownTile, forColumn: column, row: row)
                 }
                 
