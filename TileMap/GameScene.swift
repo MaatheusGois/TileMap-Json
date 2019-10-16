@@ -22,12 +22,17 @@ class GameScene: SKScene {
     let tileSize = CGSize(width: 128, height: 128)
     var columns = 0
     var rows = 0
+    var layer = SKTileMapNode()
+    
+    
     let cam = SKCameraNode()
     
     override func didMove(to view: SKView) {
-        
         self.camera = cam
-        
+        setupMap()
+    }
+    
+    func setupMap() {
         guard let mapJSON = MapHandler.loadMap() else { return }
         columns = mapJSON.getColumns()
         rows = mapJSON.getRows()
@@ -38,10 +43,10 @@ class GameScene: SKScene {
         map.yScale = 0.5
         
         let redTile = tileSet.tileGroups.first { $0.name == "block_01" }
-        let greyTile = tileSet.tileGroups.first { $0.name == "block_02"}
-        let brownTile = tileSet.tileGroups.first { $0.name == "block_03"}
+        let greyTile = tileSet.tileGroups.first { $0.name == "block_02" }
+        let brownTile = tileSet.tileGroups.first { $0.name == "block_03" }
         
-        let layer = SKTileMapNode(tileSet: tileSet, columns: columns, rows: rows, tileSize: tileSize)
+        layer = SKTileMapNode(tileSet: tileSet, columns: columns, rows: rows, tileSize: tileSize)
         
         map.addChild(layer)
             
@@ -58,7 +63,6 @@ class GameScene: SKScene {
                 
             }
         }
-        
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -67,8 +71,8 @@ class GameScene: SKScene {
         let location = touch.location(in: self)
         let previousLocation = touch.previousLocation(in: self)
 
-        cam.position.x += location.x - previousLocation.x
-        cam.position.y += location.y - previousLocation.y
+        layer.position.x += location.x - previousLocation.x
+        layer.position.y += location.y - previousLocation.y
     }
    
 }

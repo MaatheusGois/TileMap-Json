@@ -50,6 +50,7 @@
 		827FB7DF23552D6C00F5FC34 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				82DFCB9C235190AB009D9B06 /* MyTileSet.sks */,
 				827FB7DD23552D1C00F5FC34 /* map.json */,
 				827FB7DB23552C9300F5FC34 /* Map.swift */,
 				827FB7E023552D7C00F5FC34 /* MapHandler.swift */,
@@ -78,7 +79,6 @@
 			children = (
 				82DFCB8023518B6C009D9B06 /* AppDelegate.swift */,
 				82DFCB8223518B6C009D9B06 /* GameScene.sks */,
-				82DFCB9C235190AB009D9B06 /* MyTileSet.sks */,
 				82DFCB8623518B6C009D9B06 /* GameScene.swift */,
 				82DFCB8823518B6C009D9B06 /* GameViewController.swift */,
 				827FB7DF23552D6C00F5FC34 /* Map */,
