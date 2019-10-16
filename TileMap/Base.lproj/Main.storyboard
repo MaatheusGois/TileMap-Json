@@ -15,10 +15,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="cTt-DR-wbi" appends="YES" id="ey1-3G-2Wl"/>
+                        </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer id="cTt-DR-wbi">
+                    <connections>
+                        <action selector="scalePiece:" destination="BV1-FR-VrT" id="J55-eN-TVE"/>
+                    </connections>
+                </pinchGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="139" y="88"/>
         </scene>

@@ -9,7 +9,7 @@
 import Foundation
 
 class MapHandler {
-    static func loadMap() -> Map? {
+    static func loadMapFromJSON() -> Map? {
         if let url = Bundle.main.url(forResource: "map", withExtension: "json") {
             do {
                 let data = try Data(contentsOf: url)

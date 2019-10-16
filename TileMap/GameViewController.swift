@@ -11,7 +11,9 @@ import SpriteKit
 import GameplayKit
 
 class GameViewController: UIViewController {
-
+    
+    let scene = GameScene()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,13 +24,13 @@ class GameViewController: UIViewController {
         
         if let view = self.view as! SKView? {
             // Load the SKScene from 'GameScene.sks'
-            if let scene = SKScene(fileNamed: "GameScene") {
-                // Set the scale mode to scale to fit the window
-                scene.scaleMode = .aspectFill
-                
-                // Present the scene
-                view.presentScene(scene)
-            }
+            
+            
+            // Set the scale mode to scale to fit the window
+            scene.scaleMode = .resizeFill
+            
+            // Present the scene
+            view.presentScene(scene)
             
             view.ignoresSiblingOrder = true
             view.showsFPS = true
@@ -36,11 +38,11 @@ class GameViewController: UIViewController {
             view.showsPhysics = true
         }
     }
-
+    
     override var shouldAutorotate: Bool {
         return true
     }
-
+    
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         if UIDevice.current.userInterfaceIdiom == .phone {
             return .allButUpsideDown
@@ -48,8 +50,28 @@ class GameViewController: UIViewController {
             return .all
         }
     }
-
+    
     override var prefersStatusBarHidden: Bool {
         return true
     }
+    
+    @IBAction func scalePiece(_ gestureRecognizer : UIPinchGestureRecognizer) {   guard gestureRecognizer.view != nil else { return }
+        
+        if gestureRecognizer.state == .began || gestureRecognizer.state == .changed {
+            let currentScale = scene.map.xScale
+            var newScale = gestureRecognizer.scale
+            if currentScale * gestureRecognizer.scale < 0.1 {
+                newScale = 0.1 / currentScale
+            } else if currentScale * gestureRecognizer.scale > 1 {
+                newScale = 1 / currentScale
+            }
+            
+            scene.map.setScale(newScale)
+            print("current scale: \(currentScale), new scale: \(newScale)")
+            
+//            gestureRecognizer.scale = 1
+        }
+        
+    }
+    
 }
