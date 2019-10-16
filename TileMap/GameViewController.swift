@@ -15,6 +15,11 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let map = SKTextureAtlas(named: "Map")
+        SKTextureAtlas.preloadTextureAtlases([map]) {
+            print("tudo carregado")
+        }
+        
         if let view = self.view as! SKView? {
             // Load the SKScene from 'GameScene.sks'
             if let scene = SKScene(fileNamed: "GameScene") {
@@ -26,9 +31,9 @@ class GameViewController: UIViewController {
             }
             
             view.ignoresSiblingOrder = true
-            
             view.showsFPS = true
             view.showsNodeCount = true
+            view.showsPhysics = true
         }
     }
 

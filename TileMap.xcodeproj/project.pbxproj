@@ -10,6 +10,7 @@
 		827FB7DC23552C9300F5FC34 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827FB7DB23552C9300F5FC34 /* Map.swift */; };
 		827FB7DE23552D1C00F5FC34 /* map.json in Resources */ = {isa = PBXBuildFile; fileRef = 827FB7DD23552D1C00F5FC34 /* map.json */; };
 		827FB7E123552D7C00F5FC34 /* MapHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827FB7E023552D7C00F5FC34 /* MapHandler.swift */; };
+		82AD50FB2356B93B00055FEF /* Map.sks in Resources */ = {isa = PBXBuildFile; fileRef = 82AD50F92356B93B00055FEF /* Map.sks */; };
 		82DFCB8123518B6C009D9B06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DFCB8023518B6C009D9B06 /* AppDelegate.swift */; };
 		82DFCB8323518B6C009D9B06 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 82DFCB8223518B6C009D9B06 /* GameScene.sks */; };
 		82DFCB8723518B6C009D9B06 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DFCB8623518B6C009D9B06 /* GameScene.swift */; };
@@ -17,13 +18,13 @@
 		82DFCB8C23518B6C009D9B06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82DFCB8A23518B6C009D9B06 /* Main.storyboard */; };
 		82DFCB8E23518B6E009D9B06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82DFCB8D23518B6E009D9B06 /* Assets.xcassets */; };
 		82DFCB9123518B6E009D9B06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82DFCB8F23518B6E009D9B06 /* LaunchScreen.storyboard */; };
-		82DFCB9D235190AB009D9B06 /* MyTileSet.sks in Resources */ = {isa = PBXBuildFile; fileRef = 82DFCB9C235190AB009D9B06 /* MyTileSet.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		827FB7DB23552C9300F5FC34 /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
 		827FB7DD23552D1C00F5FC34 /* map.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = map.json; sourceTree = "<group>"; };
 		827FB7E023552D7C00F5FC34 /* MapHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapHandler.swift; sourceTree = "<group>"; };
+		82AD50F92356B93B00055FEF /* Map.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Map.sks; sourceTree = "<group>"; };
 		82DFCB7D23518B6C009D9B06 /* TileMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TileMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82DFCB8023518B6C009D9B06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82DFCB8223518B6C009D9B06 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -33,7 +34,6 @@
 		82DFCB8D23518B6E009D9B06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82DFCB9023518B6E009D9B06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		82DFCB9223518B6E009D9B06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		82DFCB9C235190AB009D9B06 /* MyTileSet.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyTileSet.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,8 +50,8 @@
 		827FB7DF23552D6C00F5FC34 /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				82DFCB9C235190AB009D9B06 /* MyTileSet.sks */,
 				827FB7DD23552D1C00F5FC34 /* map.json */,
+				82AD50F92356B93B00055FEF /* Map.sks */,
 				827FB7DB23552C9300F5FC34 /* Map.swift */,
 				827FB7E023552D7C00F5FC34 /* MapHandler.swift */,
 			);
@@ -148,11 +148,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82AD50FB2356B93B00055FEF /* Map.sks in Resources */,
 				827FB7DE23552D1C00F5FC34 /* map.json in Resources */,
 				82DFCB8C23518B6C009D9B06 /* Main.storyboard in Resources */,
 				82DFCB8323518B6C009D9B06 /* GameScene.sks in Resources */,
 				82DFCB8E23518B6E009D9B06 /* Assets.xcassets in Resources */,
-				82DFCB9D235190AB009D9B06 /* MyTileSet.sks in Resources */,
 				82DFCB9123518B6E009D9B06 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
